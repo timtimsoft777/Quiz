@@ -11,7 +11,7 @@ class UserStorage {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_NAME))) {
             users = (List<User>) ois.readObject();
         } catch (FileNotFoundException e) {
-            System.out.println("Əvvəlki istifadəçilər tapılmadı. Yeni istifadəçilər əlavə oluna bilər.");
+            System.out.println("Evvelki istifadeciler tapilmadi. Yeni istifadeciler elave oluna biler.");
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
